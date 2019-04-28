@@ -6,6 +6,8 @@ body {
   font-weight: 300;
   color: #111;
   background: #edeff0;
+  background-image: url(svgs/background.svg);
+  background-repeat:repeat;
 }
 
 #container {
@@ -59,4 +61,71 @@ footer {
   margin-top: 100px;
   padding-bottom: 30px;
   color: #ba8058;
+}
+
+
+ /* MY STYLES */
+
+/* NAV */
+
+.nav__top {
+   list-style: none;
+   display: flex;
+   color: #40adcf;
+   font-weight: bold;
+}
+
+.nav__top li {
+   margin: 2em;
+   transition: color 0.25s ease-in;
+}
+
+.nav__top li:hover,
+.nav__top li:hover .icon {
+   color: #ba8058;
+   fill: #ba8058;
+}
+
+/* ICONS */
+
+.icon {
+  width: 1.1em;
+  height: 1em;
+  margin-right: 0.3em;
+  transition: fill 0.25s ease-in;
+  fill: #40adcf;
+}
+
+svg path {
+  fill: inherit;
+}
+
+
+/* LOGO */
+
+.logo {
+  margin: 0 auto;
+  display: block;
+  width: 140px;
+  height: 120px;
+}
+
+.logo-letters {
+  display: none;
+  fill: #ba8058;
+}
+
+.logo-text {
+  color: #ba8058;
+  margin-top: 0;
+}
+
+@media (min-width: 425px) {
+  .logo-text {
+    display: none;
+  }
+
+  .logo-letters {
+    display: inherit;
+  }
 }
