@@ -129,3 +129,22 @@ svg path {
     display: inherit;
   }
 }
+
+/* DOGGOS */
+
+.doggos--sable {
+  color: #b97f5b;
+}
+
+.doggos--fawn {
+  color: #e9aa82;
+}
+
+.doggos--red {
+  color: #834b29;
+}
+
+.body{fill:#52595F;}
+.nose_and_eyes{fill:#2D3339;}
+.brows{fill:#DA8058;}
+.white{fill:#FBFEFF;}
