@@ -96,9 +96,9 @@ footer {
   fill: #40adcf;
 }
 
-svg path {
+/* svg path {
   fill: inherit;
-}
+} */
 
 
 /* LOGO */
@@ -108,12 +108,23 @@ svg path {
   display: block;
   width: 140px;
   height: 120px;
+  /* fill: transparent;
+  pointer-events: all; */
 }
 
+/* .logo:hover {
+  transition: fill 1s ease-in;
+}
+*/
 .logo-letters {
   display: none;
   fill: #ba8058;
+  transform: rotate(1turn);
 }
+/*
+.logo-letters:hover {
+  fill: red;
+} */
 
 .logo-text {
   color: #ba8058;
@@ -127,10 +138,32 @@ svg path {
 
   .logo-letters {
     display: inherit;
+    /* pointer-events: all; */
+  }
+
+  .logo {
+    transition: transform 1s cubic-bezier(.66,1.67,.66,.77) 0.2s;
+  }
+
+  .logo:hover {
+    transform: rotate(360deg);
   }
 }
 
 /* DOGGOS */
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexbox > * {
+  width: 15em;
+}
+
+.nose_and_eyes{fill:#2D3339;}
+.brows{fill:#DA8058;}
+.white{fill:#FBFEFF;}
 
 .doggos--sable {
   color: #b97f5b;
@@ -144,7 +177,6 @@ svg path {
   color: #834b29;
 }
 
-.body{fill:#52595F;}
-.nose_and_eyes{fill:#2D3339;}
-.brows{fill:#DA8058;}
-.white{fill:#FBFEFF;}
+.doggos--stone {
+  color: #52595e;
+}
