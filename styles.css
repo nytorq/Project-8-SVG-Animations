@@ -5,9 +5,6 @@ body {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: #111;
-  background: #edeff0;
-  background-image: url(svgs/background.svg);
-  background-repeat:repeat;
 }
 
 #container {
@@ -64,7 +61,7 @@ footer {
 }
 
 
- /* MY STYLES */
+/* MY STYLES */
 
 /* NAV */
 
@@ -76,14 +73,18 @@ footer {
 }
 
 .nav__top li {
-   margin: 2em;
+   margin: 1em;
    transition: color 0.25s ease-in;
 }
 
 .nav__top li:hover,
 .nav__top li:hover .icon {
-   color: #ba8058;
-   fill: #ba8058;
+  color: #ba8058;
+  fill: #ba8058;
+}
+
+.nav__top li:hover .icon {
+  transform: rotate(20deg) scale(1.2);
 }
 
 /* ICONS */
@@ -92,13 +93,9 @@ footer {
   width: 1.1em;
   height: 1em;
   margin-right: 0.3em;
-  transition: fill 0.25s ease-in;
+  transition: fill 0.25s ease-in 0s, transform 0.1s ease-in 0s;
   fill: #40adcf;
 }
-
-/* svg path {
-  fill: inherit;
-} */
 
 
 /* LOGO */
@@ -108,14 +105,8 @@ footer {
   display: block;
   width: 140px;
   height: 120px;
-  /* fill: transparent;
-  pointer-events: all; */
 }
 
-/* .logo:hover {
-  transition: fill 1s ease-in;
-}
-*/
 .logo-letters {
   display: none;
   fill: #ba8058;
@@ -130,28 +121,12 @@ footer {
 .logo-text {
   color: #ba8058;
   margin-top: 0;
+  padding-left: 20px;
 }
 
-@media (min-width: 425px) {
-  .logo-text {
-    display: none;
-  }
-
-  .logo-letters {
-    display: inherit;
-    /* pointer-events: all; */
-  }
-
-  .logo {
-    transition: transform 1s cubic-bezier(.3,1.63,.54,.9) 0.2s;
-  }
-
-  /* .logo:hover {
-    transform: rotate(360deg);
-  } */
-}
 
 /* DOGGOS */
+
 
 .flexbox {
   display: flex;
@@ -160,6 +135,15 @@ footer {
 
 .flexbox > * {
   width: 15em;
+}
+
+.doggo-box {
+  margin: 0 auto;
+}
+
+.doggo-title {
+  text-align: center;
+  margin-top: 0;
 }
 
 .nose_and_eyes{fill:#2D3339;}
@@ -180,4 +164,28 @@ footer {
 
 .doggos--stone {
   color: #52595e;
+}
+
+/* MEDIA QUERIES */
+
+
+@media (min-width: 425px) {
+
+  body {
+    background: #edeff0;
+    background-image: url(svgs/background.svg);
+    background-repeat:repeat;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .logo-letters {
+    display: inherit;
+  }
+
+  .logo {
+    transition: transform 1s cubic-bezier(.3,1.63,.54,.9) 0.2s;
+  }
 }
